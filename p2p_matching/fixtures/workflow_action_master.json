@@ -1,0 +1,37 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-18 13:49:50.064454",
+  "name": "Submit Invoice",
+  "workflow_action_name": "Submit Invoice"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-18 13:53:15.914314",
+  "name": "Reject Invoice",
+  "workflow_action_name": "Reject Invoice"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-18 13:54:12.430708",
+  "name": "Revise Draft",
+  "workflow_action_name": "Revise Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-18 13:51:38.020457",
+  "name": "Send for Exception Review",
+  "workflow_action_name": "Send for Exception Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-10-18 13:52:33.117808",
+  "name": "Approve Override",
+  "workflow_action_name": "Approve Override"
+ }
+]

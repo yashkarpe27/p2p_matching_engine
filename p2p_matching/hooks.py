@@ -277,3 +277,52 @@ app_license = "mit"
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+# 1. Attach custom JS to standard ERPNext Purchase Invoice form
+doctype_js = {
+    "Purchase Invoice": "public/js/purchase_invoice.js"
+}
+
+# 2. Intercept Purchase Invoice validate event
+doc_events = {
+    "Purchase Invoice": {
+        "validate": "p2p_matching.overrides.purchase_invoice.validate_3_way_match"
+    }
+}
+
+# 3. Export Custom Fields and Workflow configurations for Git version control
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            [
+                "dt",
+                "in",
+                ["Purchase Invoice", "Purchase Invoice Item"],
+            ]
+        ],
+    },
+    {
+        "dt": "Workflow",
+        "filters": [["name", "=", "Purchase Invoice 3-Way Match"]],
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [["name", "in", ["Draft", "Exception Hold", "Approved", "Rejected"]]],
+    },
+    {
+        "dt": "Workflow Action Master",
+        "filters": [
+            [
+                "name",
+                "in",
+                [
+                    "Submit Invoice",
+                    "Send for Exception Review",
+                    "Approve Override",
+                    "Reject Invoice",
+                    "Revise Draft",
+                ],
+            ]
+        ],
+    },
+]

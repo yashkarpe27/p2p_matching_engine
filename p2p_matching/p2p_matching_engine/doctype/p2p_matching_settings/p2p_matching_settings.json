@@ -1,0 +1,68 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "creation": "2026-10-18 12:28:38.958817",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "3_way_match_configuration",
+  "enable_3_way_match",
+  "price_variance_tolerance"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "description": "Enforce PO, PR, and PI validation",
+   "fieldname": "enable_3_way_match",
+   "fieldtype": "Check",
+   "label": "Enable 3 Way Match"
+  },
+  {
+   "default": "1",
+   "description": "Allowed rate increase (%) over PO before Exception Hold",
+   "fieldname": "price_variance_tolerance",
+   "fieldtype": "Percent",
+   "label": "Price Variance Tolerance (%)"
+  },
+  {
+   "fieldname": "3_way_match_configuration",
+   "fieldtype": "Section Break",
+   "label": "3 Way Match Configuration"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-10-18 17:55:43.572492",
+ "modified_by": "Administrator",
+ "module": "P2P Matching Engine",
+ "name": "P2P Matching Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
