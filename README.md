@@ -15,3 +15,12 @@ This app solves this by introducing **configurable tolerance thresholds**, an **
 * **Split-Invoice Loophole Protection:** The Python backend dynamically calculates previously billed quantities across multiple submitted invoices, ensuring vendors cannot bypass limits by splitting shipments into multiple smaller invoices.
 * **Real-Time Frontend UI (`doctype_js`):** Injects a custom JavaScript controller using `frm.set_intro` to render real-time Green, Orange, or Red audit banners based on live variance calculations.
 * **Executive Analytics:** Includes a custom Script Report featuring complex multi-table joins, four executive KPI summary cards, and a dynamic bar chart tracking supplier overbilling variances.
+
+## Installation
+
+To install this app on your Frappe bench, run the following commands:
+
+```bash
+bench get-app [https://github.com/yashkarpe27/p2p_matching_engine.git](https://github.com/yashkarpe27/p2p_matching_engine.git)
+bench --site <your-site-name> install-app p2p_matching
+bench --site <your-site-name> migrate
